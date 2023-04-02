@@ -49,14 +49,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     );
   }
 
-
-  void navigateToHome() {
-    Future.delayed(const Duration(seconds: 2), () 
-    {
-      Get.to(() => const HomeView(), transition: Transition.fade, duration: KTransitionDuration);
-    });
-  }
-
   void initSlidingAnimation() {
     animationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 1));
@@ -64,8 +56,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
     slidingAnimation =
         Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
             .animate(animationController);
-            
+
     animationController.forward();
+  }
+
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 2), () 
+    {
+      Get.to(() => const HomeView(), transition: Transition.fade, duration: KTransitionDuration);
+    });
   }
 }
 
