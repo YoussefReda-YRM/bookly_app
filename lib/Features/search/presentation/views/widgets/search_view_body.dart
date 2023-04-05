@@ -9,8 +9,9 @@ class SearchViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           CustomSearchTextField(),
           SizedBox(height: 16,),
