@@ -1,8 +1,5 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/Features/home/domain/entities/book_entity.dart';
 import 'package:equatable/equatable.dart';
-
-// part of 'featured_books_cubit.dart';
 
 abstract class FeaturedBooksState extends Equatable {
   const FeaturedBooksState();
